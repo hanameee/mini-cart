@@ -1,6 +1,6 @@
 <div align="center">
   <h1>
-      미니 사전과제 #3 장바구니
+     🐑 미니 사전과제 #3 장바구니
   </h1>
   <strong>FastCampus 강의 - <a href="https://fastcampus.co.kr/dev_online_fefinal">30개 프로젝트로 배우는
 프론트엔드 웹 개발 (with React)</a>를 위한 자료입니다.</strong>
@@ -44,7 +44,7 @@ yarn install
 
 ### 3) React 버전 코드 확인하기
 
-React 버전의 보일러 플레이트와 답안 코드는 별도의 저장소인 [mini-stopwatch-react](https://github.com/hanameee/mini-stopwatch-react)에 업로드 되어 있습니다.
+React 버전의 보일러 플레이트와 답안 코드는 별도의 저장소인 [mini-cart-react](hhttps://github.com/hanameee/mini-cart-react)에 업로드 되어 있습니다.
 
 해당 저장소의 README.md 파일을 참고해주세요.
 
@@ -52,10 +52,10 @@ React 버전의 보일러 플레이트와 답안 코드는 별도의 저장소�
 
 본 저장소의 `wiki`에서 요구사항을 확인하실 수 있습니다.
 
--   [링크](https://github.com/hanameee/mini-stopwatch/wiki/%08요구사항)
+- [링크](https://github.com/hanameee/mini-cart/wiki/%08요구사항)
 
 ## 🖥 데모 페이지
 
--   [링크](https://hanameee.github.io/mini-stopwatch/src)
+- [링크](https://hanameee.github.io/mini-cart/src)
 
-![image-20220109000429346](https://user-images.githubusercontent.com/25149664/148838281-528cd43d-a21a-4040-bb87-164b1dc701f2.png)
+![image-20220331032219235](https://user-images.githubusercontent.com/25149664/160905643-f7582ad6-0412-4c28-81ab-e6e652099460.png)
