@@ -52,7 +52,7 @@ React 버전의 보일러 플레이트와 답안 코드는 별도의 저장소�
 
 본 저장소의 `wiki`에서 요구사항을 확인하실 수 있습니다.
 
-- [링크](https://github.com/hanameee/mini-cart/wiki/%08요구사항)
+- [링크](https://github.com/hanameee/mini-cart/wiki/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD)
 
 ## 🖥 데모 페이지
 
