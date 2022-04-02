@@ -1,21 +1,68 @@
 const $totalCount = document.getElementById('total-count');
 
 class CartList {
-  constructor($target, data) {
-    this.data = data;
+  constructor($target, state) {
+    this.state = state;
     this.$section = document.createElement('ul');
     this.$section.className = '-my-6 divide-y divide-gray-200';
     $target.appendChild(this.$section);
     this.render();
   }
 
-  setState(data) {
-    this.data = data;
+  setState(newState) {
+    this.state = newState;
     this.render();
   }
 
+  addCartItem(clickedProduct) {
+    let newState;
+    const clickedProductId = clickedProduct.id;
+    const checkedIdx = this.state.findIndex((d) => d.id === clickedProductId);
+    if (checkedIdx === -1) {
+      const newItem = { ...clickedProduct, count: 1 };
+      newState = [...this.state, newItem];
+    } else {
+      newState = [...this.state];
+      newState[checkedIdx].count += 1;
+    }
+    this.setState(newState);
+  }
+
+  increaseCartItem(id) {
+    const newState = [...this.state];
+    const checkedIdx = this.state.findIndex((d) => d.id === id);
+    if (newState[checkedIdx].count < 10) {
+      newState[checkedIdx].count += 1;
+    } else {
+      alert('장바구니에 담을 수 있는 최대 수량은 10개입니다.');
+    }
+    this.setState(newState);
+  }
+
+  decreaseCartItem(id) {
+    const newState = [...this.state];
+    const checkedIdx = this.state.findIndex((d) => d.id === id);
+    if (newState[checkedIdx].count > 1) {
+      newState[checkedIdx].count -= 1;
+    } else {
+      alert('장바구니에 담기 위한 최소 수량은 1개입니다.');
+    }
+    this.setState(newState);
+  }
+
+  removeCartItem(id) {
+    const newState = [...this.state];
+    const checkedIdx = this.state.findIndex((d) => d.id === id);
+    newState.splice(checkedIdx, 1);
+    this.setState(newState);
+  }
+
+  saveToLocalStorage() {
+    localStorage.setItem('cartState', JSON.stringify(this.state));
+  }
+
   render() {
-    this.$section.innerHTML = this.data
+    this.$section.innerHTML = this.state
       .map(
         ({ id, imgSrc, name, price, count }) =>
           `
@@ -49,7 +96,7 @@ class CartList {
       )
       .join('');
     $totalCount.innerHTML =
-      this.data
+      this.state
         .reduce((acc, cur) => acc + cur.price * cur.count, 0)
         .toLocaleString() + '원';
   }
