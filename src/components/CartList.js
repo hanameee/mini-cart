@@ -4,7 +4,7 @@ class CartList {
   constructor($target, state) {
     this.state = state;
     this.$section = document.createElement('ul');
-    this.$section.className = '-my-6 divide-y divide-gray-200';
+    this.$section.className = 'divide-y divide-gray-200';
     $target.appendChild(this.$section);
     this.render();
   }
