@@ -44,7 +44,7 @@ yarn install
 
 ### 3) React 버전 코드 확인하기
 
-React 버전의 보일러 플레이트와 답안 코드는 별도의 저장소인 [mini-cart-react](hhttps://github.com/hanameee/mini-cart-react)에 업로드 되어 있습니다.
+React 버전의 보일러 플레이트와 답안 코드는 별도의 저장소인 [mini-cart-react](https://github.com/hanameee/mini-cart-react)에 업로드 되어 있습니다.
 
 해당 저장소의 README.md 파일을 참고해주세요.
 
